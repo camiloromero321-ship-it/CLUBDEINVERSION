@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Digital Wealth | Club de Inversión Beta</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuente Google Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255,255,255,0.1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.4s ease;
+            border-color: #525252;
+        }
+        /* Gradiente actualizado: Blanco a Gris Oscuro para mayor contraste */
+        .number-gradient {
+            background: linear-gradient(to bottom, #ffffff, #444444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased selection:bg-white selection:text-black">
+
+    <!-- NAV -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-neutral-800">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="text-xl font-medium tracking-widest flex items-center gap-3">
+                <div class="w-6 h-6 border border-white rotate-45 flex items-center justify-center">
+                    <div class="w-2 h-2 bg-white"></div>
+                </div>
+                <span>ONYX ASSETS</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#planes" class="hidden md:block text-neutral-400 hover:text-white text-sm transition tracking-wide">Estrategias</a>
+                <a href="#contacto" class="bg-white hover:bg-neutral-200 text-black px-6 py-2 rounded-sm text-sm font-medium transition">
+                    Solicitar Acceso
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="pt-40 pb-24 container mx-auto px-6 flex flex-col lg:flex-row items-center relative overflow-hidden">
+        <div class="lg:w-1/2 z-10 relative">
+            <h1 class="text-5xl lg:text-7xl font-light leading-tight mb-8 tracking-tight">
+                Gestión Patrimonial <br>
+                <span class="font-medium text-white text-glow">Digital & Privada</span>
+            </h1>
+            <p class="text-neutral-400 text-lg mb-10 leading-relaxed max-w-lg font-light">
+                Un vehículo exclusivo de inversión en <strong>activos digitales</strong>. 
+                Generamos rendimientos consistentes mediante estrategias institucionales, 
+                manteniendo tu capital seguro bajo tu propia custodia.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-start">
+                <a href="#planes" class="group bg-transparent border border-neutral-700 hover:border-white text-white px-8 py-3 rounded-sm transition flex items-center justify-center gap-3">
+                    Ver Estrategias <i class="fas fa-arrow-right text-xs transform group-hover:translate-x-1 transition"></i>
+                </a>
+                <a href="#como-funciona" class="text-neutral-400 px-8 py-3 hover:text-white transition flex items-center gap-2">
+                    ¿Cómo funciona?
+                </a>
+            </div>
+        </div>
+        
+        <div class="lg:w-1/2 mt-16 lg:mt-0 flex justify-center lg:justify-end relative z-10">
+            <div class="bg-neutral-900/50 backdrop-blur-md p-10 border border-neutral-800 relative max-w-sm w-full">
+                <div class="absolute top-0 right-0 w-20 h-20 border-t border-r border-neutral-700 -mt-2 -mr-2"></div>
+                
+                <div class="flex items-center justify-between mb-8 pb-4 border-b border-neutral-800">
+                    <span class="text-neutral-500 text-xs uppercase tracking-widest">Rendimiento Objetivo</span>
+                    <span class="text-green-500 text-xs flex items-center gap-2">
+                        <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div> Activo
+                    </span>
+                </div>
+                
+                <div class="mb-8">
+                    <div class="text-6xl font-light text-white mb-2">3% - 8%</div>
+                    <div class="text-neutral-500 text-sm">Mensual Estimado (Beta)</div>
+                </div>
+
+                <div class="space-y-4 font-light">
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-neutral-400">Custodia</span>
+                        <span class="text-white">Propia (Non-Custodial)</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-neutral-400">Tecnología</span>
+                        <span class="text-white flex items-center gap-2">API Trading <i class="fas fa-link text-xs text-neutral-600"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ICONOGRAPHY / BADGES SECTION -->
+    <section class="border-y border-neutral-900 bg-neutral-950">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center md:text-left">
+                <!-- Icon 1 -->
+                <div class="space-y-4 group">
+                    <div class="w-16 h-16 rounded-full border border-neutral-800 bg-black flex items-center justify-center group-hover:border-white transition duration-500">
+                        <i class="fas fa-lock text-2xl text-neutral-400 group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-1">Non-Custodial</h4>
+                        <p class="text-neutral-500 text-xs leading-relaxed">Tu capital nunca sale de tu cuenta.</p>
+                    </div>
+                </div>
+                <!-- Icon 2 -->
+                <div class="space-y-4 group">
+                    <div class="w-16 h-16 rounded-full border border-neutral-800 bg-black flex items-center justify-center group-hover:border-white transition duration-500">
+                        <i class="fas fa-chart-line text-2xl text-neutral-400 group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-1">Gestión Pro</h4>
+                        <p class="text-neutral-500 text-xs leading-relaxed">Estrategias de trading institucional.</p>
+                    </div>
+                </div>
+                <!-- Icon 3 -->
+                <div class="space-y-4 group">
+                    <div class="w-16 h-16 rounded-full border border-neutral-800 bg-black flex items-center justify-center group-hover:border-white transition duration-500">
+                        <i class="fas fa-eye text-2xl text-neutral-400 group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-1">Transparencia</h4>
+                        <p class="text-neutral-500 text-xs leading-relaxed">Monitoreo en tiempo real 24/7.</p>
+                    </div>
+                </div>
+                <!-- Icon 4 -->
+                <div class="space-y-4 group">
+                    <div class="w-16 h-16 rounded-full border border-neutral-800 bg-black flex items-center justify-center group-hover:border-white transition duration-500">
+                        <i class="fas fa-server text-2xl text-neutral-400 group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-1">Infraestructura</h4>
+                        <p class="text-neutral-500 text-xs leading-relaxed">Ejecución vía Bitunix API.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="como-funciona" class="py-32 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="mb-24 border-l-2 border-white pl-8">
+                <h2 class="text-4xl font-light mb-4 text-white">Tu Capital. Tu Control.</h2>
+                <p class="text-neutral-500 max-w-xl text-lg font-light">
+                    Eliminamos el riesgo de contraparte. Operamos mediante permisos digitales sin acceso a retiros.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="group relative p-8 border border-neutral-900 bg-neutral-950/30 hover:bg-neutral-900 transition duration-500 overflow-hidden">
+                    <div class="absolute bottom-0 left-0 w-full h-0.5 bg-neutral-800 group-hover:bg-white transition-colors duration-500"></div>
+                    <div class="flex justify-between items-start mb-10">
+                        <!-- Ajuste: Opacidad subida a 90 para contraste alto -->
+                        <span class="number-gradient text-8xl font-bold opacity-90 transition duration-500 select-none">01</span>
+                        <i class="fas fa-user-circle text-4xl text-neutral-500 group-hover:text-white transition duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-medium mb-4 text-white">Cuenta Propia</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed max-w-xs">
+                        Abres tu cuenta en <strong>Bitunix</strong> a tu nombre. Depositas tus fondos (USDT). Nosotros no tocamos el dinero, tú mantienes la custodia total.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="group relative p-8 border border-neutral-900 bg-neutral-950/30 hover:bg-neutral-900 transition duration-500 overflow-hidden">
+                    <div class="absolute bottom-0 left-0 w-full h-0.5 bg-neutral-800 group-hover:bg-white transition-colors duration-500"></div>
+                    <div class="flex justify-between items-start mb-10">
+                        <span class="number-gradient text-8xl font-bold opacity-90 transition duration-500 select-none">02</span>
+                        <i class="fas fa-key text-4xl text-neutral-500 group-hover:text-white transition duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-medium mb-4 text-white">Conexión API</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed max-w-xs">
+                        Creas una llave de acceso digital (API Key) con permisos restringidos: <strong>Solo Trading</strong>. La opción de retiros queda bloqueada criptográficamente.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="group relative p-8 border border-neutral-900 bg-neutral-950/30 hover:bg-neutral-900 transition duration-500 overflow-hidden">
+                    <div class="absolute bottom-0 left-0 w-full h-0.5 bg-neutral-800 group-hover:bg-white transition-colors duration-500"></div>
+                    <div class="flex justify-between items-start mb-10">
+                        <span class="number-gradient text-8xl font-bold opacity-90 transition duration-500 select-none">03</span>
+                        <i class="fas fa-chart-bar text-4xl text-neutral-500 group-hover:text-white transition duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-medium mb-4 text-white">Rendimiento</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed max-w-xs">
+                        Nuestros algoritmos operan el mercado. Tú ves las ganancias en tiempo real. Facturamos nuestra comisión solo sobre los resultados positivos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTMENT PLANS -->
+    <section id="planes" class="py-32 bg-neutral-950">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl font-light mb-4">Portafolios de Inversión</h2>
+                <p class="text-neutral-500">Estrategias adaptadas a diferentes perfiles de riesgo.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                
+                <!-- PLAN A -->
+                <div class="bg-black border border-neutral-900 p-8 hover:border-neutral-700 transition duration-300">
+                    <div class="text-neutral-500 text-xs font-bold tracking-widest uppercase mb-4">Conservador</div>
+                    <h3 class="text-2xl font-medium text-white mb-6">Yield & Preserve</h3>
+                    
+                    <div class="mb-8 pb-8 border-b border-neutral-900">
+                        <div class="text-4xl font-light text-white mb-1">1% - 2.5%</div>
+                        <p class="text-neutral-600 text-xs">Retorno Mensual Objetivo</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 text-sm text-neutral-400">
+                        <li class="flex items-center gap-3"><span class="w-1 h-1 bg-white rounded-full"></span> Preservación de capital</li>
+                        <li class="flex items-center gap-3"><span class="w-1 h-1 bg-white rounded-full"></span> Baja volatilidad</li>
+                        <li class="flex items-center gap-3"><span class="w-1 h-1 bg-white rounded-full"></span> Mínimo 3 Meses</li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-3 border border-neutral-800 text-neutral-400 hover:text-white hover:border-white text-center text-sm transition">Consultar</a>
+                </div>
+
+                <!-- PLAN B (Featured) -->
+                <div class="bg-neutral-900 border border-neutral-800 p-8 relative transform md:-translate-y-4 shadow-2xl shadow-black">
+                    <div class="absolute top-0 inset-x-0 h-1 bg-white"></div>
+                    <div class="text-white text-xs font-bold tracking-widest uppercase mb-4">Balanceado</div>
+                    <h3 class="text-2xl font-medium text-white mb-6">Smart Growth</h3>
+                    
+                    <div class="mb-8 pb-8 border-b border-neutral-800">
+                        <div class="text-5xl font-light text-white mb-1">3% - 5%</div>
+                        <p class="text-neutral-500 text-xs">Retorno Mensual Objetivo</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 text-sm text-neutral-300">
+                        <li class="flex items-center gap-3"><span class="w-1 h-1 bg-white rounded-full"></span> Crecimiento equilibrado</li>
+                        <li class="flex items-center gap-3"><span class="w-1 h-1 bg-white rounded-full"></span> Exposición media</li>
+                        <li class="flex items-center gap-3"><span class="w-1 h-1 bg-white rounded-full"></span> Mínimo 6 Meses</li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-4 bg-white hover:bg-neutral-200 text-black text-center text-sm font-medium transition">Aplicar a este plan</a>
+                </div>
+
+                <!-- PLAN C -->
+                <div class="bg-black border border-neutral-900 p-8 hover:border-neutral-700 transition duration-300">
+                    <div class="text-neutral-500 text-xs font-bold tracking-widest uppercase mb-4">Dinámico</div>
+                    <h3 class="text-2xl font-medium text-white mb-6">Alpha Trader</h3>
+                    
+                    <div class="mb-8 pb-8 border-b border-neutral-900">
+                        <div class="text-4xl font-light text-white mb-1">5% - 8%+</div>
+                        <p class="text-neutral-600 text-xs">Retorno Mensual Objetivo</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 text-sm text-neutral-400">
+                        <li class="flex items-center gap-3"><span class="w-1 h-1 bg-white rounded-full"></span> Maximización agresiva</li>
+                        <li class="flex items-center gap-3"><span class="w-1 h-1 bg-white rounded-full"></span> Alta volatilidad</li>
+                        <li class="flex items-center gap-3"><span class="w-1 h-1 bg-white rounded-full"></span> Mínimo 12 Meses</li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-3 border border-neutral-800 text-neutral-400 hover:text-white hover:border-white text-center text-sm transition">Consultar</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- REFERRAL BANNER (Enhanced) -->
+    <section class="py-20 border-y border-neutral-900 bg-gradient-to-r from-neutral-950 to-neutral-900">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="md:w-2/3">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fas fa-users text-neutral-500 text-xl"></i>
+                    <!-- Ajuste: Tamaño aumentado a text-lg (grande) -->
+                    <span class="text-lg font-bold text-white tracking-widest uppercase">Programa Ambassadors</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-light text-white mb-2">Crece con nosotros.</h3>
+                <p class="text-neutral-400 text-lg font-light">
+                    Únete al programa de referidos y obtén el <strong class="text-white">10% de nuestras comisiones</strong> de por vida por cada inversor cualificado.
+                </p>
+            </div>
+            <div class="md:w-1/3 flex md:justify-end">
+                <a href="#contacto" class="group px-8 py-4 border border-neutral-600 text-white hover:bg-white hover:text-black hover:border-white transition duration-300 text-sm tracking-wide font-medium flex items-center gap-3">
+                    QUIERO SER AMBASSADOR 
+                    <i class="fas fa-arrow-right text-xs transform group-hover:translate-x-1 transition"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section id="contacto" class="py-32 bg-black text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-light mb-8">Solicita tu invitación.</h2>
+            <p class="text-neutral-500 mb-12 max-w-xl mx-auto font-light">
+                Operamos bajo un modelo estricto de invitación privada. <br>
+                Contacta a la administración para iniciar tu proceso de onboarding.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="#" class="min-w-[220px] bg-white text-black hover:bg-neutral-200 px-8 py-4 text-sm font-medium tracking-widest transition duration-300">
+                    WHATSAPP DIRECTO
+                </a>
+                <a href="mailto:info@tudominio.com" class="min-w-[220px] border border-neutral-800 text-neutral-400 hover:border-neutral-600 hover:text-white px-8 py-4 text-sm font-medium tracking-widest transition duration-300">
+                    ENVIAR EMAIL
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 text-xs text-neutral-600 border-t border-neutral-900">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
+                <div>
+                    <div class="text-white font-medium text-sm tracking-widest mb-4 flex items-center gap-2">
+                        <div class="w-3 h-3 bg-white rotate-45"></div> ONYX ASSETS
+                    </div>
+                    <p class="max-w-xs font-light">Gestión patrimonial privada enfocada en activos digitales.</p>
+                </div>
+                <div class="md:text-right space-y-2">
+                    <p>Bogotá, Colombia</p>
+                    <p>contacto@onyxassets.com</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-neutral-900 pt-8 text-justify font-light leading-relaxed">
+                <p class="mb-2 text-neutral-500">DISCLAIMER:</p>
+                <p>
+                    La información presentada es de carácter estrictamente privado para el círculo "Friends & Family". 
+                    No constituye asesoramiento financiero ni oferta pública. El trading de <strong>activos digitales</strong> conlleva riesgos 
+                    y puede no ser adecuado para todos. Los rendimientos pasados no garantizan futuros. 
+                    Operamos bajo mandatos privados sin custodia de fondos.
+                </p>
+            </div>
+            <div class="text-center mt-8 pt-8 text-neutral-700">
+                <p>&copy; 2025 Onyx Assets Group. Private Beta.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
